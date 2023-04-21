@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/questions_summary.dart';
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.chosenAsnwers});
+  const ResultsScreen({super.key, required this.chosenAsnwers,});
   final List<String> chosenAsnwers;
 
   //map is like dictionary in python it mapss keps to values
@@ -15,8 +15,8 @@ class ResultsScreen extends StatelessWidget {
         "question_index": i,
         "question": questions[i].text,
         "correct_answer": questions[i].answers[0],
-        "user_answer": chosenAsnwers,
-      });
+        "user_answer": chosenAsnwers[i],
+      },);
     }
     return summary;
   }
