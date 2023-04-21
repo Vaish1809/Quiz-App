@@ -12,10 +12,12 @@ Widget build(context){
   return  ElevatedButton(
             onPressed: onTap,
           style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 40),
             backgroundColor:const  Color.fromARGB(255, 78, 26, 94),
-            foregroundColor: Colors.white//textcolor
+            foregroundColor: Colors.white,//textcolor
+         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
           ),
-          child : Text(answerText),
+          child : Text(answerText,textAlign: TextAlign.center),
           );
 }
 }
